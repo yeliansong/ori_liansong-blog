@@ -1,3 +1,17 @@
+---
+layout:     post   				    # 使用的布局（不需要改）
+title:      三： 运行于Kubernetes中的容器 				# 标题
+subtitle:   Kubernetes in action 读书笔记 #副标题
+date:       2019-09-10 				# 时间
+author:     Liansong 						# 作者
+header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - tech
+    - k8s
+    - docker
+---
+
 ### 1. 为啥要搞出POD
 
 我们知道，POD是Kubernetes管理的最小单位，为啥Kubernetes不直接管理container，要管理POD呢？这是有原因的，我们知道，container是单一进程的，啥意思呢，就是container的设计思想就是每个container只运行一个进程， 如果用枯bernetes直接去管理这些container，肯定是错综复杂，所以就搞出了POD这个东西，来实现容器间的资源和网络隔离，在同一个POD下的所有容器共享网络和系统资源，但是呢，一个POD内的所有容器肯定是逻辑业务密切结合的一个整体，他们肯定是有很强的联系。每一个container可以用端口来进行区分。
