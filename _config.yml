@@ -67,7 +67,7 @@ gitalk:
   clientSecret: 3bd30a8c98b176dea9a485a36d066b5356075a1d    #生成的clientSecret
   repo: yeliansong.github.io    #仓库名称
   owner: yeliansong    #github用户名
-  admin: yeliansong
+  admin: Liansong
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
