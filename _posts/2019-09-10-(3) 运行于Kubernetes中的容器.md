@@ -4,14 +4,13 @@ title:      三： 运行于Kubernetes中的容器 				# 标题
 subtitle:   Kubernetes in action 读书笔记 #副标题
 date:       2019-09-10 				# 时间
 author:     Liansong 						# 作者
-header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+header-img: img/tag-bg-o.jpg 	#这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - tech
     - k8s
     - docker
 ---
-
 
 ### 1. 为啥要搞出POD
 
