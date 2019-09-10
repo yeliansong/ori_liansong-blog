@@ -1,3 +1,17 @@
+---
+layout:     post   				    # 使用的布局（不需要改）
+title:      一：Kubernetes的介绍 				# 标题
+subtitle:   Kubernetes in action 读书笔记 #副标题
+date:       2019-09-10 				# 时间
+author:     Liansong 						# 作者
+header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - tech
+    - k8s
+    - docker
+---
+
 ### 1. 单体应用和微服务的比较   
 
 ​		单体应用的弊端：以单进程或几个进程的方式运行于几台服务器，部署的周期长，运维和开发脱节，开发人员完成开发后打包成一个整体给运维部署。   
