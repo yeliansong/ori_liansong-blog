@@ -1,3 +1,18 @@
+---
+layout:     post   				    # 使用的布局（不需要改）
+title:      二：Kubernetes 和 Docker的使用 				# 标题
+subtitle:   Kubernetes in action 读书笔记 #副标题
+date:       2019-09-10 				# 时间
+author:     Liansong 						# 作者
+header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - tech
+    - k8s
+    - docker
+---
+
+
 ### 1. 理解Docker镜像,文件系统和容器
 
 ​		容器的镜像就是打包编译容器后的一个文件，打包镜像是依赖Dockerfile文件，From行定义了镜像的起始内容，也就是构建的基础镜像，镜像的构建过程是将整个目录的文件上传到Docker守护进程中，Docker会先从基础镜像仓库中拉取基础镜像，然后镜像的打包是一个分层的结构，基础镜像作为一层，然后每一条命令会作为一个新的分层，一层一层叠加，整个就是一个联合文件系统。
