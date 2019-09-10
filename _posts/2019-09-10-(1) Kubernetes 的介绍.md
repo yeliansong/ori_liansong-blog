@@ -32,9 +32,9 @@ tags:								#标签
 
 容器技术其实就是Linux的隔离技术。通过什么来进行隔离呢？ 命名空间和CGROUP。 命名空间是用来隔离不同的进程，CGROUP是用来隔离资源。就是通过这个能够使一个宿主机可以运行多个不同的应用程序。同一个宿主机上的两个应用程序也可以共享文件，如果共用同一个基本镜像，就是共用资源，但是 这一层文件是只读的，如果重写写入，是在基本镜像基础上写入一层文件，容器是用的联合文件系统。
 
-![1568008027146](https://github.com/yeliansong/yeliansong.github.io/blob/master/pwa/1568008027146.png)
+![1568008027146](../pwa/1568008027146.png)
 
-![1568008075823](https://github.com/yeliansong/yeliansong.github.io/blob/master/pwa/1568008075823.png)
+![1568008075823](../pwa/pwa/1568008075823.png)
 
 
 
