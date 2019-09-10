@@ -17,7 +17,7 @@ tags:								#标签
 
 ​		容器的镜像就是打包编译容器后的一个文件，打包镜像是依赖Dockerfile文件，From行定义了镜像的起始内容，也就是构建的基础镜像，镜像的构建过程是将整个目录的文件上传到Docker守护进程中，Docker会先从基础镜像仓库中拉取基础镜像，然后镜像的打包是一个分层的结构，基础镜像作为一层，然后每一条命令会作为一个新的分层，一层一层叠加，整个就是一个联合文件系统。
 
-![1568011079301](D:\Users\tmprl6\AppData\Roaming\Typora\typora-user-images\1568011079301.png)
+![1568011079301](../pwa/1568011079301.png)
 
 ​	
 
@@ -33,7 +33,7 @@ tags:								#标签
 
 ​		多节点的Kubernetes集群概览：
 
-![1568012876300](D:\Users\tmprl6\AppData\Roaming\Typora\typora-user-images\1568012876300.png)
+![1568012876300](../pwa/1568012876300.png)
 
 
 
@@ -47,7 +47,7 @@ tags:								#标签
 
 ​		我的理解阿，ReplicationControler 是用来管理POD的水平伸缩，能够确保规定的POD个数能按照设置的正常运行。
 
-![1568018641181](D:\Users\tmprl6\AppData\Roaming\Typora\typora-user-images\1568018641181.png)
+![1568018641181](../pwa/1568018641181.png)
 
 ​		可以看下这张图，外部访问过来后，只会映射到一个内部ip，然后到底调用的哪个POD我们是不用关心的，里面的每个POD都是独立的ip。ReplicationControler来控制副本的个数。
 
