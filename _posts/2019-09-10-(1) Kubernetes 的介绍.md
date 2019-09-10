@@ -1,6 +1,6 @@
 ---
 layout:     post   				    # 使用的布局（不需要改）
-title:      Kubernetes的介绍 				# 标题
+title:      一：Kubernetes的介绍 				# 标题
 subtitle:   Kubernetes in action 读书笔记 #副标题
 date:       2019-09-10 				# 时间
 author:     Liansong 						# 作者
