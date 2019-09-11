@@ -4,7 +4,7 @@ title:      二：Kubernetes 和 Docker的使用 				# 标题
 subtitle:   Kubernetes in action 读书笔记 #副标题
 date:       2019-09-10 				# 时间
 author:     Liansong 						# 作者
-header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+header-img: img/post-bg-rwd.jpg 	#这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - tech
