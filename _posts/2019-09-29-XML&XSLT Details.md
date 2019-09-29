@@ -4,7 +4,7 @@ title:      XML & XSLT Details 				# 标题
 subtitle:   XML XSLT 小结             #副标题
 date:       2019-09-29 				# 时间
 author:     Liansong 						# 作者
-header-img: img/XML.png 	#这篇文章标题背景图片
+header-img: img/tag-bg-o.jpg 	#这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签
     - tech
