@@ -162,9 +162,7 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 ### 3. Additional
 
 Actually there are many issues when you follow the steps.
-
 Unsolved problems:
-
 - [ ] After execute the kubeadm join command, the terminal show it was added successful, but in fact, the new node isn't existing in the node list.
 
   ![](https://tva1.sinaimg.cn/large/00831rSTgy1gctpsng90mj326w0t6gx6.jpg)
