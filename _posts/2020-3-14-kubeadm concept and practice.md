@@ -154,7 +154,6 @@ Linux system.
   sudo kubeadm reset
   ```
 
-
 ### 3. Additional
 
 Actually there are many issues when you follow the steps.
