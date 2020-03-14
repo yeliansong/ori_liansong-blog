@@ -124,7 +124,6 @@ Linux system.
   
   
 
-
 - Configure the kubectl.
 
   As we know, kubectl is the command tool to control kubernetes cluster. When we switch to the master node, we need to configure the kubectl.
