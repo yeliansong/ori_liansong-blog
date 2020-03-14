@@ -118,9 +118,9 @@ Linux system.
   
 *  After start up successful, will generate the kubeadm token, this token can be used to join other nodes. You can use below command to view the token.
 
-  > ```bash
-  > kubeadm token list
-  > ```
+    > ```bash
+    > kubeadm token list
+     > ```
   
   
 
