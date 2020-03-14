@@ -1,4 +1,17 @@
-### kubeadm concept and practice
+---
+layout:     post   		  # 使用的布局（不需要改）
+title:      kubeadm concept and practice    # 标题
+subtitle:   学习笔记 #副标题
+date:       2020-03-14 				# 时间
+author:     Liansong 						# 作者
+header-img: img/post-bg-android.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - 学习笔记
+    - tech
+    - k8s
+---
+
 
 ### 1. kubeadm knowledge map
 
