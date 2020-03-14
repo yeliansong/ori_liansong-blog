@@ -104,12 +104,14 @@ Linux system.
 
 #### 2.3 kubeadm practice
 
-*  Initialize the master node.
+* Initialize the master node.
 
   > ```bash
   > kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
   > ```
+  
   pod-network-cidr, means identify the pod ip range, also we use the flannel network design solution.
+  
   Ignore, means ignore the error when startup. Because when start up kubeadm, perhaps hit the hardware uncomfortable. 
   
   
