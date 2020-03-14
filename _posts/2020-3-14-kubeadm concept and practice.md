@@ -102,7 +102,6 @@ Linux system.
 #### 2.3 kubeadm practice
 
 *  Initialize the master node.
-
   > ```bash
   > kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
   > ```
