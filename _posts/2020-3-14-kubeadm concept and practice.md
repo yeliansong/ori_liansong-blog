@@ -112,14 +112,11 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   Ignore, means ignore the error when startup. Because when start up kubeadm, perhaps hit the hardware uncomfortable. 
 
 
-
 - After start up successful, will generate the kubeadm token, this token can be used to join other nodes. You can use below command to view the token.
 
   ```bash
   kubeadm token list
   ```
-
-
 
 - Configure the kubectl.
 
@@ -133,24 +130,17 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   source ~/.bashrc
   ```
 
-
-
 - Install the pod network add-on. The pods can communicate each other after install the pod network. Also we use the flannel network mode.
 
   ```bash
   kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
   ```
 
-  
-
 -  Join other nodes to the cluster.
-
   ```bash
-  sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
+    sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash    sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-     errors=all
   ```
-
-
-
+  
 -  Clean up the environment
   After deploy, you can clean up the environment. 
   ```
@@ -161,7 +151,6 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 ### 3. Additional
 
 Actually there are many issues when you follow the steps.
-
 Unsolved problems:
 
 - [ ] ​	After execute the kubeadm join command, the terminal show it was added successful, but in fact, the new node isn't existing in the node list.
