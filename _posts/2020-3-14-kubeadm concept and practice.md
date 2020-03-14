@@ -111,7 +111,6 @@ Linux system.
   > ```
 
   pod-network-cidr, means identify the pod ip range, also we use the flannel network design solution.
-  
   Ignore, means ignore the error when startup. Because when start up kubeadm, perhaps hit the hardware uncomfortable. 
   
   
