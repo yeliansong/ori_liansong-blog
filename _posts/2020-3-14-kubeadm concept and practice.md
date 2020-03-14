@@ -32,7 +32,7 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 
 #### 2.2 Environment configure
 
-- [ ]     Install container (Docker)
+-   Install container (Docker)
 
   ```bash
   <!--
@@ -86,7 +86,7 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   systemctl restart containerd
   ```
 
-- [ ]     Install kubeadm, kubectl and kubelet
+-   Install kubeadm, kubectl and kubelet
 
   ```bash
   apt-get update && apt-get install -y apt-transport-https curl
@@ -152,14 +152,10 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 
 
 -  Clean up the environment
-
   After deploy, you can clean up the environment. 
-
   ```
   sudo kubeadm reset
   ```
-
-
 
 
 ### 3. Additional
