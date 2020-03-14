@@ -33,7 +33,6 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 #### 2.2 Environment configure
 
 -   Install container (Docker)
-
   ```bash
   <!--
   # Install containerd
@@ -87,25 +86,23 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   ```
 
 -   Install kubeadm, kubectl and kubelet
-
-  ```bash
-  apt-get update && apt-get install -y apt-transport-https curl
-  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-  cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
-  deb https://apt.kubernetes.io/ kubernetes-xenial main
-  EOF
-  apt-get update
-  apt-get install -y kubelet kubeadm kubectl
-  apt-mark hold kubelet kubeadm kubectl
+      ```bash
+      apt-get update && apt-get install -y apt-transport-https curl
+      curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+      cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+      deb https://apt.kubernetes.io/ kubernetes-xenial main
+      EOF
+      apt-get update
+      apt-get install -y kubelet kubeadm kubectl
+      apt-mark hold kubelet kubeadm kubectl
   ```
 
 #### 2.3 kubeadm practice
 
 - Initialize the master node.
-
-  ```bash
-  kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
-  ```
+      ```bash
+      kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
+      ```
 
   pod-network-cidr, means identify the pod ip range, also we use the flannel network design solution.
 
@@ -131,7 +128,6 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   ```
 
 - Install the pod network add-on. The pods can communicate each other after install the pod network. Also we use the flannel network mode.
-
   ```bash
   kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
   ```
