@@ -29,7 +29,7 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 
 #### 2.1 The practice environment
 
-​		Google cloud instance.  Linux system.
+    Google cloud instance.  Linux system.
 
 #### 2.2 Environment configure
 
@@ -113,14 +113,11 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   Ignore, means ignore the error when startup. Because when start up kubeadm, perhaps hit the hardware uncomfortable. 
 
 
-
 - After start up successful, will generate the kubeadm token, this token can be used to join other nodes. You can use below command to view the token.
 
   ```bash
   kubeadm token list
   ```
-
-
 
 - Configure the kubectl.
 
@@ -168,7 +165,7 @@ Actually there are many issues when you follow the steps.
 
 Unsolved problems:
 
-- [ ] ​	After execute the kubeadm join command, the terminal show it was added successful, but in fact, the new node isn't existing in the node list.
+- [ ] After execute the kubeadm join command, the terminal show it was added successful, but in fact, the new node isn't existing in the node list.
 
   ![](https://tva1.sinaimg.cn/large/00831rSTgy1gctpsng90mj326w0t6gx6.jpg)
   
