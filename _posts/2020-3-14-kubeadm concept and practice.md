@@ -28,11 +28,11 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 
 #### 2.1 The practice environment
 
-​		Google cloud instance.  Linux system.
+Google cloud instance.  Linux system.
 
 #### 2.2 Environment configure
 
-- [ ]    Install container (Docker)
+   [ ]    Install container (Docker)
 
   ```bash
   <!--
@@ -86,7 +86,7 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   systemctl restart containerd
   ```
 
-- [ ]    Install kubeadm, kubectl and kubelet
+ [ ]    Install kubeadm, kubectl and kubelet
 
   ```bash
   apt-get update && apt-get install -y apt-transport-https curl
@@ -144,7 +144,6 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
   
 
 -  Join other nodes to the cluster.
-
   ```bash
   sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
   ```
@@ -152,7 +151,6 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 
 
 -  Clean up the environment
-
   After deploy, you can clean up the environment. 
 
   ```
