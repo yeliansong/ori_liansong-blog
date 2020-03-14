@@ -33,7 +33,7 @@ Kubeadm is a tool to implement the k8s environment quickly. Also you don't need 
 
 #### 2.2 Environment configure
 
-- [ ]   Install container (Docker)
+   [ ]   Install container (Docker)
 
   ```bash
   <!--
