@@ -33,7 +33,6 @@ Linux system.
 #### 2.2 Environment configure
 
 *  Install container (Docker)
-
   ```bash
   <!--
   # Install containerd
@@ -87,7 +86,6 @@ Linux system.
   ```
 
 *  Install kubeadm, kubectl and kubelet
-
   ```bash
   apt-get update && apt-get install -y apt-transport-https curl
   curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
@@ -136,13 +134,13 @@ Linux system.
 - Install the pod network add-on. The pods can communicate each other after install the pod network. Also we use the flannel network mode.
 
   ```bash
-  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
+    kubectl apply -f              https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
   ```
   
 -  Join other nodes to the cluster.
 
   ```bash
-  sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
+      sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
   ```
 
 
