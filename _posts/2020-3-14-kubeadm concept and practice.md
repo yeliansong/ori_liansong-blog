@@ -96,9 +96,9 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
 
 *  Initialize the master node.
 
-  > ```bash
-  > kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
-  > ```
+      > ```bash
+      > kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
+      > ```
 
   pod-network-cidr, means identify the pod ip range, also we use the flannel network design solution.
   
@@ -108,9 +108,9 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
   
 *  After start up successful, will generate the kubeadm token, this token can be used to join other nodes. You can use below command to view the token.
 
-  > ```bash
-  > kubeadm token list
-  > ```
+      > ```bash
+      > kubeadm token list
+      > ```
   
   
 
