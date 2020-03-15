@@ -89,7 +89,8 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
 *  Initialize the master node.
       > ```bash
       > kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
-      > ```
+      > ```  
+      
   pod-network-cidr, means identify the pod ip range, also we use the flannel network design solution.
   Ignore, means ignore the error when startup. Because when start up kubeadm, perhaps hit the hardware uncomfortable. 
   
@@ -124,7 +125,7 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
       > sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
       > ```
   
--  Clean up the environment. 
+-  Clean up the environment.  
     After deploy, you can clean up the environment. 
       > ```bash
       > sudo kubeadm reset
