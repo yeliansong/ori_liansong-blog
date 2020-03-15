@@ -22,17 +22,16 @@ tags:								#标签
 Kubeadm is a tool to implement the k8s environment quickly. Also you don't need to care about the configure environment, just know how to bootstrap it.  Master the basically command to use kubeadm.
 
 
-### 2. Kubeadm practice
+### 2. Kubeadm practice  
 
 #### 2.1 The practice environment
 
-Google cloud instance.
+Google cloud instance  
 Linux system.
 
 #### 2.2 Environment configure
 
 *  Install container (Docker)
-      > ```bash
       > # 安装 Docker CE
       > ## 设置仓库
       > ### 安装软件包以允许 apt 通过 HTTPS 使用存储库
@@ -69,9 +68,6 @@ Linux system.
       > # 重启 docker.
       > systemctl daemon-reload
       > systemctl restart docker
-      > ```
-
-
 
 * Install kubeadm, kubectl and kubelet
   >```bash
