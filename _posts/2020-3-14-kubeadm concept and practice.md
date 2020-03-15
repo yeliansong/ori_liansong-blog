@@ -32,6 +32,7 @@ Linux system.
 #### 2.2 Environment configure
 
 *  Install container (Docker)
+      > ```bash 
       > # 安装 Docker CE
       > ## 设置仓库
       > ### 安装软件包以允许 apt 通过 HTTPS 使用存储库
@@ -68,7 +69,8 @@ Linux system.
       > # 重启 docker.
       > systemctl daemon-reload
       > systemctl restart docker
-
+      >```
+      
 * Install kubeadm, kubectl and kubelet
   >```bash
   >apt-get update && apt-get install -y apt-transport-https curl
@@ -81,11 +83,9 @@ Linux system.
   >apt-mark hold kubelet kubeadm kubectl
   >```
 
-  
-
 #### 2.3 kubeadm practice
 
-Background: Use kubeadm to create the k8s master node, then loop other nodes to this master node.
+Background: Use kubeadm to create the k8s master node, then loop other nodes to this master node. 
 *  Initialize the master node.
       > ```bash
       > kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
@@ -124,13 +124,11 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
       > sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
       > ```
   
--  Clean up the environment
-
-  After deploy, you can clean up the environment. 
-
-  > ```bash
-  > sudo kubeadm reset
-  > ```
+-  Clean up the environment. 
+    After deploy, you can clean up the environment. 
+      > ```bash
+      > sudo kubeadm reset
+      > ```
 
 ### 3. Additional
 
@@ -147,7 +145,7 @@ Unsolved problems:
   > kubeadm join --token 5dhzcw.h7aih16mg982ms2o 10.128.0.2:6443 --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
   > ```
   
-  Certainly, you must be the root role. The result is below.
+  Certainly, you must be the root role. The result is below. 
   ![WX20200315-170157@2x](https://tva1.sinaimg.cn/large/00831rSTgy1gcupzi3schj30vc03ymy7.jpg)
   
   
