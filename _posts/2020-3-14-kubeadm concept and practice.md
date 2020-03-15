@@ -151,9 +151,9 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
 
   After deploy, you can clean up the environment. 
 
-      > ```bash
-      > sudo kubeadm reset
-      > ```
+  > ```bash
+  > sudo kubeadm reset
+  > ```
 
 
 
