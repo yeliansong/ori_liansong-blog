@@ -140,9 +140,9 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
   
 -  Join other nodes to the cluster.
 
-  > ``` bash
-  > sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
-  > ```
+      > ``` bash
+      > sudo kubeadm join 10.128.0.2:6443 --token 5dhzcw.h7aih16mg982ms2o --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
+      > ```
   
   
 
@@ -151,9 +151,9 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
 
   After deploy, you can clean up the environment. 
 
-  > ```bash
-  > sudo kubeadm reset
-  > ```
+      > ```bash
+      > sudo kubeadm reset
+      > ```
 
 
 
