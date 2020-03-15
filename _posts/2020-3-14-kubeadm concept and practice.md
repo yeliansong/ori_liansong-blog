@@ -34,44 +34,44 @@ Linux system.
 
 *  Install container (Docker)
 
-  > ```bash
-  > # 安装 Docker CE
-  > ## 设置仓库
-  > ### 安装软件包以允许 apt 通过 HTTPS 使用存储库
-  > apt-get update && apt-get install \
-  >   apt-transport-https ca-certificates curl software-properties-common
-  > 
-  > ### 新增 Docker 的 官方 GPG 秘钥
-  > curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-  > 
-  > ### 添加 Docker apt 仓库
-  > add-apt-repository \
-  >   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-  >   $(lsb_release -cs) \
-  >   stable"
-  > 
-  > ## 安装 Docker CE
-  > apt-get update && apt-get install docker-ce=18.06.2~ce~3-0~ubuntu
-  > 
-  > # 设置 daemon
-  > cat > /etc/docker/daemon.json <<EOF
-  > {
-  >   "exec-opts": ["native.cgroupdriver=systemd"],
-  >   "log-driver": "json-file",
-  >   "log-opts": {
-  >     "max-size": "100m"
-  >   },
-  >   "storage-driver": "overlay2"
-  > }
-  > EOF
-  > 
-  > mkdir -p /etc/systemd/system/docker.service.d
-  > 
-  > 
-  > # 重启 docker.
-  > systemctl daemon-reload
-  > systemctl restart docker
-  > ```
+      > ```bash
+      > # 安装 Docker CE
+      > ## 设置仓库
+      > ### 安装软件包以允许 apt 通过 HTTPS 使用存储库
+      > apt-get update && apt-get install \
+      >   apt-transport-https ca-certificates curl software-properties-common
+      > 
+      > ### 新增 Docker 的 官方 GPG 秘钥
+      > curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+      > 
+      > ### 添加 Docker apt 仓库
+      > add-apt-repository \
+      >   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+      >   $(lsb_release -cs) \
+      >   stable"
+      > 
+      > ## 安装 Docker CE
+      > apt-get update && apt-get install docker-ce=18.06.2~ce~3-0~ubuntu
+      > 
+      > # 设置 daemon
+      > cat > /etc/docker/daemon.json <<EOF
+      > {
+      >   "exec-opts": ["native.cgroupdriver=systemd"],
+      >   "log-driver": "json-file",
+      >   "log-opts": {
+      >     "max-size": "100m"
+      >   },
+      >   "storage-driver": "overlay2"
+      > }
+      > EOF
+      > 
+      > mkdir -p /etc/systemd/system/docker.service.d
+      > 
+      > 
+      > # 重启 docker.
+      > systemctl daemon-reload
+      > systemctl restart docker
+      > ```
 
 
 
