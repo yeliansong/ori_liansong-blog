@@ -53,14 +53,22 @@ Linux system.
       > 
       > # 设置 daemon
       > cat > /etc/docker/daemon.json <<EOF
+      >
       > {
+      >
       >   "exec-opts": ["native.cgroupdriver=systemd"],
+      >
       >   "log-driver": "json-file",
+      >
       >   "log-opts": {
+      >
       >     "max-size": "100m"
+      >
       >   },
+      >
       >   "storage-driver": "overlay2"
       > }
+      >
       > EOF
       > 
       > mkdir -p /etc/systemd/system/docker.service.d
@@ -76,10 +84,10 @@ Linux system.
   >apt-get update && apt-get install -y apt-transport-https curl
   >curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
   >
-  >cat <<EOF >/etc/apt/sources.list.d/kubernetes.list.  
+  >cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
   >
   >
-  >deb https://apt.kubernetes.io/ kubernetes-xenial main. 
+  >deb https://apt.kubernetes.io/ kubernetes-xenial main
   >
   >
   >EOF
