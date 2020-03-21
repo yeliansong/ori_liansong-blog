@@ -21,7 +21,7 @@ tags:								#标签
 
 -  **Architecture**  
 
-  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd1jc7hhp6j30u0115q9e.jpg" alt="cpp1" style="zoom:75%;" />
+  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd1jc7hhp6j30u0115q9e.jpg" alt="cpp1" style="zoom:100%;" />
 
   
 
@@ -31,4 +31,4 @@ tags:								#标签
 
 -   **Generic Programming**
 
-  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd1jcw620nj30u011cjy7.jpg" alt="333" style="zoom:50%;" />
+  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd1jcw620nj30u011cjy7.jpg" alt="333" style="zoom:100%;" />
