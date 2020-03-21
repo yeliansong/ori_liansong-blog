@@ -52,7 +52,6 @@ Linux system.
       > 
       > # 设置 daemon
       > cat > /etc/docker/daemon.json <<EOF
-      >
       > {
       >
       >   "exec-opts": ["native.cgroupdriver=systemd"],
