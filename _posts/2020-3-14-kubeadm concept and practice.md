@@ -16,7 +16,6 @@ tags:								#标签
 ### 1. kubeadm knowledge map
 
 
-
 <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gctptvfodzj318m0min0y.jpg" alt="knowleage map" style="zoom:50%;" />
 
 Kubeadm is a tool to implement the k8s environment quickly. Also you don't need to care about the configure environment, just know how to bootstrap it.  Master the basically command to use kubeadm.
