@@ -155,4 +155,30 @@ Unsolved problems:
   How to solve this?   
   You can download the master node, "/etc/kubernetes/admin.conf", then copy this file to the node machine path "/etc/kubernetes/". Then follow the previous steps to configure the kubectl.  
 
+### 4. Reference Link
+
+- [ ]   How to install docker.
+
+  https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker
+
+  
+
+- [ ]   How to install kubectl, kubeadm, kubelet
+
+  https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+
+  
+
+- [ ]   Practice Intruction
+
+  https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
+  
+
+  
+
+  
+
+
+
 ​			
