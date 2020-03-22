@@ -35,9 +35,9 @@ Okay,  it's very easy to understand. Like above, master node is the most importa
 - After execute that, deployment is completed. You can execute command "kubectl get pods", show the deployment.
 
   >ylsccnu1_gmail_com@liansong-instance:~$ kubectl get pods -o wide
-  >NAME                        READY   STATUS    RESTARTS   AGE     IP           NODE                      NOMINATED NODE   READINESS GATES
-  >httpd-app-c77bb8b47-pw848   1/1     Running   0          2m54s   10.244.2.2   liansong-instance-node1   <none>           <none>
-  >httpd-app-c77bb8b47-vz5f9   1/1     Running   0          2m54s   10.244.1.2   liansong-instance-node2   <none>           <none>
+  >NAME                        READY   STATUS    RESTARTS   AGE     IP           NODE                   >   NOMINATED NODE   READINESS GATES
+  >httpd-app-c77bb8b47-pw848   1/1     Running   0          2m54s   10.244.2.2   liansong-instance-    >node1   <none>           <none>
+  >httpd-app-c77bb8b47-vz5f9   1/1     Running   0          2m54s   10.244.1.2   liansong-instance->node2   <none>           <none>
 
   The application is deployed separately in the 2 nodes.  
 
