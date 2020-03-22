@@ -56,14 +56,12 @@ Linux system.
       >   "exec-opts": ["native.cgroupdriver=systemd"],
       >   "log-driver": "json-file",
       >   "log-opts": {
-      >     "max-size": "100m"   
-      >   },
-      >
+      >   "max-size": "100m"   
+      > },
       >   "storage-driver": "overlay2"
       > }
       >EOF
       > mkdir -p /etc/systemd/system/docker.service.d
-      > 
       > 
       > # 重启 docker.
       > systemctl daemon-reload
@@ -75,7 +73,8 @@ Linux system.
   >apt-get update && apt-get install -y apt-transport-https curl
   >curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
   >
-  >cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+  >cat <<EOF >
+  >/etc/apt/sources.list.d/kubernetes.list
   >deb https://apt.kubernetes.io/ kubernetes-xenial main
   >EOF
   >
@@ -138,7 +137,6 @@ Actually there are many issues when you follow the steps.
 Unsolved problems:
 *  After execute the kubeadm join command, the terminal show it was added successful, but in fact, the new node isn't existing in the node list.
   ![](https://tva1.sinaimg.cn/large/00831rSTgy1gctpsng90mj326w0t6gx6.jpg)
-  
   The solution: I misunderstood the concept of kubeadm,  So hit this issue.
   Actually, kubeadm aims to create the implement the k8s environment, so it will create the kubenetes master node when you execute the kubeadm init command. Then you can arrange other nodes to this master node. So my solution is like this.
   
@@ -146,18 +144,13 @@ Unsolved problems:
   > ```
   > kubeadm join --token 5dhzcw.h7aih16mg982ms2o 10.128.0.2:6443 --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
   > ```
-  
   Certainly, you must be the root role. The result is below.
   ![WX20200315-170157@2x](https://tva1.sinaimg.cn/large/00831rSTgy1gcupzi3schj30vc03ymy7.jpg)
   
   
-
 -  In the node machine, when you execute the command "kubectl version" or "kubectl get nodes", hit this issue.
-
   ![33334](https://tva1.sinaimg.cn/large/00831rSTgy1gd2sn8gkg0j31de032jsa.jpg)
-
   How to solve this?   
-
   You can download the master node, "/etc/kubernetes/admin.conf", then copy this file to the node machine path "/etc/kubernetes/". Then follow the previous steps to configure the kubectl.  
 
 ​			
