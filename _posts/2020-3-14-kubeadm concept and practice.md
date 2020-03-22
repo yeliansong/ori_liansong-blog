@@ -43,9 +43,9 @@ Linux system.
       > 
       > ### 添加 Docker apt 仓库
       > add-apt-repository \
-      >   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+      > "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
       >   $(lsb_release -cs) \
-      >   stable"
+      >     stable"
       > 
       > ## 安装 Docker CE
       > apt-get update && apt-get install docker-ce=18.06.2~ce~3-0~ubuntu
