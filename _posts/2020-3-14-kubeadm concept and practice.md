@@ -144,7 +144,9 @@ Unsolved problems:
   > ```
   > kubeadm join --token 5dhzcw.h7aih16mg982ms2o 10.128.0.2:6443 --discovery-token-ca-cert-hash sha256:e9e6843a6ae6fc5fb8acb9f116bc58d1c1e0f30d1da9bfe3bf151319c3788d57 --ignore-preflight-errors=all
   > ```
+  
   Certainly, you must be the root role. The result is below.
+  
   ![WX20200315-170157@2x](https://tva1.sinaimg.cn/large/00831rSTgy1gcupzi3schj30vc03ymy7.jpg)
   
   
