@@ -31,7 +31,7 @@ Linux system.
 #### 2.2 Environment configure
 
 *  Install container (Docker)
-      > ```bash 
+      > ```
       > # 安装 Docker CE
       > ## 设置仓库
       > ### 安装软件包以允许 apt 通过 HTTPS 使用存储库
@@ -61,28 +61,22 @@ Linux system.
       >
       >   "storage-driver": "overlay2"
       > }
-      >
-      > EOF
-      > 
+      >EOF
       > mkdir -p /etc/systemd/system/docker.service.d
       > 
       > 
       > # 重启 docker.
       > systemctl daemon-reload
       > systemctl restart docker
-      >```
+      > ```
       
 * Install kubeadm, kubectl and kubelet
-  >```bash
+  >```
   >apt-get update && apt-get install -y apt-transport-https curl
   >curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
   >
   >cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
-  >
-  >
   >deb https://apt.kubernetes.io/ kubernetes-xenial main
-  >
-  >
   >EOF
   >
   >apt-get update
@@ -97,17 +91,16 @@ Background: Use kubeadm to create the k8s master node, then loop other nodes to 
 *  Initialize the master node.
       > ```bash
       > kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
-      > ```  
+      > ```
       
   pod-network-cidr, means identify the pod ip range, also we use the flannel network design solution.  
   Ignore, means ignore the error when startup. Because when start up kubeadm, perhaps hit the hardware uncomfortable. 
-  
   
 *  After start up successful, will generate the kubeadm token, this token can be used to join other nodes. You can use below command to view the token.
       > ```bash
       > kubeadm token list
       > ```
-  
+
   
 
 
@@ -159,3 +152,12 @@ Unsolved problems:
   
   
 
+-  In the node machine, when you execute the command "kubectl version" or "kubectl get nodes", hit this issue.
+
+  ![33334](https://tva1.sinaimg.cn/large/00831rSTgy1gd2sn8gkg0j31de032jsa.jpg)
+
+  How to solve this?   
+
+  You can download the master node, "/etc/kubernetes/admin.conf", then copy this file to the node machine path "/etc/kubernetes/". Then follow the previous steps to configure the kubectl.  
+
+​			
