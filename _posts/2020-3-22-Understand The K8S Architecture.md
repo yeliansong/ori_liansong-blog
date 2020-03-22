@@ -16,8 +16,6 @@ tags:								#标签
 
 ![5555](https://tva1.sinaimg.cn/large/00831rSTgy1gd2v5xofmoj31iv0u0n7a.jpg)
 
-![6666](/Users/yeliansong/Desktop/6666.png)
-
 Okay,  it's very easy to understand. Like above, master node is the most important. It controls the other nodes to join the cluster. Also API server is exposed outside. Through the master node, then can arrange the other nodes.
 
 ### 2. Practice
