@@ -157,27 +157,27 @@ Unsolved problems:
 
 ### 4. Reference Link
 
-- [ ]   How to install docker.
+- How to install docker.
 
-  https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker
+  ​	[https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker)
 
-  
 
-- [ ]   How to install kubectl, kubeadm, kubelet
 
-  https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+- How to install kubectl, kubeadm, kubelet
 
-  
+  ​	[https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
-- [ ]   Practice Intruction
 
-  https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
 
-  
+- Practice Intruction
 
-  
+  ​	[https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 
-  
+
+
+
+
+
 
 
 
