@@ -38,10 +38,15 @@ Okay, Let us analysis this YAML sample.
 It used the indentation to represent the layer. Every layer was dependent and called each other.The meaning of every key.
 
 apiVersion: this is the current configure version.
+
 Kind: the resource created type. 
+
 Metadata: the resource metadata. 
+
 spec：the deployment's specification. 
+
 Selector: use to select which template. 
+
 Template: define the pod information. 
 
 So, from this, I think I can describe with mind map.We can refer to below.
