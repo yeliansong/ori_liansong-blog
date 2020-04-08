@@ -34,16 +34,15 @@ tags:								#标签s
 >        image: nginx:1.7.9
 >```
 
-Okay, Let us analysis this YAML sample.
-
+Okay, Let us analysis this YAML sample. 
 It used the indentation to represent the layer. Every layer was dependent and called each other.The meaning of every key.
 
 apiVersion: this is the current configure version.
-Kind: the resource created type.
-Metadata: the resource metadata.  
-spec：the deployment's specification.
-Selector: use to select which template.
-Template: define the pod information.
+Kind: the resource created type. 
+Metadata: the resource metadata. 
+spec：the deployment's specification. 
+Selector: use to select which template. 
+Template: define the pod information. 
 
 So, from this, I think I can describe with mind map.We can refer to below.
 
@@ -70,6 +69,7 @@ At first, we need to determine the aim of job. The containers can divide into tw
 >        command: ["echo", "hello k8s job" ]
 >      restartPolicy: OnFailure
 >```
+
 Actually there are many kinds of job configures, including regular job, parallelism job and timing job. Also need to flexible use the restartPolicy parameter. OnFailure means, when failed, will restart the pod. You can set "never" as well means will restart the pod until it 's successful.
 
 ### 3. Summary of YAML
