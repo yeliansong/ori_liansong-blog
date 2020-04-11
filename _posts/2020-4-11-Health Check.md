@@ -163,21 +163,17 @@ When you do the rolling update, you can record the revision. When you want to ro
 - Kuebctl apply -f rollback.yaml --record
 
   When add the record parameter, will record the reversion.
-
   ![image-20200410235930980](https://tva1.sinaimg.cn/large/00831rSTgy1gdp45c5s14j31ig0oohdt.jpg)
 
 - Kubectl rollout history deployment http 
 
   This will show the all deployment history version.
-
   ![image-20200410235854295](https://tva1.sinaimg.cn/large/00831rSTgy1gdp44rkss8j31640cqtoh.jpg)
 
 - Kubectl rollout undo deployment http --to-revision=1
 
   This will rollout the version.
-
   ![image-20200411000050144](https://tva1.sinaimg.cn/large/00831rSTgy1gdp46orwccj31mw0aa4gs.jpg)
 
   Also, when you rollout successful, the version will change as your deployment.
-
   ![image-20200411000139532](https://tva1.sinaimg.cn/large/00831rSTgy1gdp47k5pepj31760bo170.jpg)
