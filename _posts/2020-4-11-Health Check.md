@@ -150,7 +150,7 @@ How the health check used in the rolling update? Image one case, you update the 
 
 ![ ](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdpzk08tjbj313i0qe4qp.jpg)
 
-![image-20200411180855382](/Users/yeliansong/Library/Application Support/typora-user-images/image-20200411180855382.png)
+![image-20200411180855382](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdpztqjufbj30qa0zqx47.jpg)
 
 maxSurge and maxUnavailable are used to define the rolling update copies and failure copies.
 
