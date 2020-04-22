@@ -21,7 +21,7 @@ We always deploy the final version applications to the production env. There are
 
 There are 4 ways to do the production release. 1) Rolling-update. 2) Recreate. 3) Blue/Green. 4) Canary. Below is the details.
 
-- Recreate Update
+- **Recreate Update**
 
   This is very clumsy way to update. Destory V1 application  then create V2 application. Will hit service down issue in a period time. 
 
