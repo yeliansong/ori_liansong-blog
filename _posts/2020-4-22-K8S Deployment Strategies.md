@@ -25,7 +25,7 @@ There are 4 ways to do the production release. 1) Rolling-update. 2) Recreate. 3
 
   This is very clumsy way to update. Destory V1 application  then create V2 application. Will hit service down issue in a period time. 
 
-  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2p8fwyufj31ga0e8wiv.jpg" alt="image-20200422180122888" style="zoom:40%;" />
+  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2p8fwyufj31ga0e8wiv.jpg" alt="image-20200422180122888" style="zoom:50%;" />
 
 - **Rolling update.**
 
@@ -80,9 +80,9 @@ There are 4 ways to do the production release. 1) Rolling-update. 2) Recreate. 3
 
     <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2mnx7txzj31160j20vd.jpg" alt="image-20200422163230530" style="zoom: 50%;" />
 
-    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2mq854t1j31ce0tqgz2.jpg" alt="image-20200422163433964" style="zoom:33%;" />
+    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2mq854t1j31ce0tqgz2.jpg" alt="image-20200422163433964" style="zoom:50%;" />
 
-    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2n3378duj31eu0dqdix.jpg" alt="image-20200422164644225" style="zoom:40%;" />
+    <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2n3378duj31eu0dqdix.jpg" alt="image-20200422164644225" style="zoom:50%;" />
 
   - **Using Deployment  for updating apps declaratively**
 
@@ -152,19 +152,19 @@ There are 4 ways to do the production release. 1) Rolling-update. 2) Recreate. 3
 
 - **Blue / Green** 
 
-  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2omtr0qij313i0iidl9.jpg" alt="image-20200422174039505" style="zoom: 33%;" />
+  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2omtr0qij313i0iidl9.jpg" alt="image-20200422174039505" style="zoom: 50%;" />
 
-  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2ouuod2xj31go0e8436.jpg" alt="image-20200422174822512" style="zoom:40%;" />
+  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2ouuod2xj31go0e8436.jpg" alt="image-20200422174822512" style="zoom:50%;" />
 
   Actually this deployment needs V1 and V2 applications are existing. The client connect the Deployment through the labels. 
 
-  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2otd304pj312u0iedn4.jpg" alt="image-20200422174654910" style="zoom: 40%;" />
+  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2otd304pj312u0iedn4.jpg" alt="image-20200422174654910" style="zoom: 50%;" />
 
 -  **Canary Deployment**
 
-  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2p1g1r2sj312g0iqjwu.jpg" alt="image-20200422175442073" style="zoom:33%;" />
+  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2p1g1r2sj312g0iqjwu.jpg" alt="image-20200422175442073" style="zoom:50%;" />
 
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2p1vzi0nj312i0i679j.jpg" alt="image-20200422175508774" style="zoom:33%;" />
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2p1vzi0nj312i0i679j.jpg" alt="image-20200422175508774" style="zoom:50%;" />
 
 <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge2p2ln3wcj31h00e6dkh.jpg" alt="image-20200422175549047" style="zoom:40%;" />
 
