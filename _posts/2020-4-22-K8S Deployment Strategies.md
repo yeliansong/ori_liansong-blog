@@ -8,11 +8,9 @@ header-img: img/post-bg-coffee.jpeg 	#这篇文章标题背景图片
 catalog: true 						# 是否归档
 tags:								#标签s
 
-​	 -    学习笔记
-
+- 学习笔记
 - tech
-
-    - k8s
+- k8s
 ---
 
 ### 1. Background
