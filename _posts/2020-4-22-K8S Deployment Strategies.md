@@ -13,7 +13,7 @@ tags:								#标签s
 - k8s
 ---
 
-### **1. Background**
+### 1. Background
 
 We always deploy the final version applications to the production env. There are several ways to ensure the release production stably and safety. Below sections are k8s deployment strategies.
 
