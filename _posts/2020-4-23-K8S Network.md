@@ -25,7 +25,7 @@ Docker networking is limited within the host itself. By default, it creates a vi
 
 This means Pod to Pod communicate. In the cluster, all Pods share the same network segment. So the Pods can communicate directly.
 
-​                                                        <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge438gf6o3j311y0gejxe.jpg" alt="image-20200423225122129" style="zoom:33%;" />      	   
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge438gf6o3j311y0gejxe.jpg" alt="image-20200423225122129" style="zoom:33%;" />      	   
 
 Also you can expose the Pod to a service, then in the cluster, other applications can access the Pod service. Like this,
 
