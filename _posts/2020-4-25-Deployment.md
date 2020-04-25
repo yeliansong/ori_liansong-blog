@@ -60,8 +60,7 @@ First, we create a Deployment.
   >```
 
 -   **Pausing and Resuming a Deployment**
-
-  You can pause a Deployment before triggering one or more updates and then resume it. This allows you to apply multiple fixes in between pausing and resuming without triggering unnecessary rollouts.
+    You can pause a Deployment before triggering one or more updates and then resume it. This allows you to apply multiple fixes in between pausing and resuming without triggering unnecessary rollouts.
 
   >```shell
   >kubectl rollout pause deployment nginx-deploymnet
