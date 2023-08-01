@@ -13,12 +13,11 @@ tags:								#标签
     - docker
 ---
 
-
 ### 1. 理解Docker镜像,文件系统和容器
 
 容器的镜像就是打包编译容器后的一个文件，打包镜像是依赖Dockerfile文件，From行定义了镜像的起始内容，也就是构建的基础镜像，镜像的构建过程是将整个目录的文件上传到Docker守护进程中，Docker会先从基础镜像仓库中拉取基础镜像，然后镜像的打包是一个分层的结构，基础镜像作为一层，然后每一条命令会作为一个新的分层，一层一层叠加，整个就是一个联合文件系统。
 
-![1568011079301](https://tva1.sinaimg.cn/large/006y8mN6gy1g6ur4dnruaj30dt07w75q.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images006y8mN6gy1g6ur4dnruaj30dt07w75q.jpg" style="zoom: 200%;" />
 
 
 容器的理解， 容器其实就是镜像运行的一个实例。容器是依赖于主机的操作系统运行的，所以就会有一个问题，比如在RedHat宿主机上打包的一个镜像，这个镜像能否在ubuntu上运行呢？不一定，要看你是否有用到宿主机特有的， 但是你在另外一个宿主机上运行没有的东西。镜像运行出的容器，相当于宿主机的一个进程。每个容器间的文件系统也是独立的。
@@ -33,7 +32,7 @@ tags:								#标签
 
 多节点的Kubernetes集群概览：
 
-![1568012876300](https://tva1.sinaimg.cn/large/006y8mN6gy1g6ur4f4tsyj30g00b841m.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images006y8mN6gy1g6ur4f4tsyj30g00b841m.jpg" style="zoom:150%;" />
 
 
 
@@ -47,7 +46,7 @@ POD 是Kubernetes 控制的最小单位，Kubernetes不会关心容器的调度�
 
 我的理解阿，ReplicationControler 是用来管理POD的水平伸缩，能够确保规定的POD个数能按照设置的正常运行。
 
-![1568018641181](https://tva1.sinaimg.cn/large/006y8mN6gy1g6ur4gdgi7j30g607z0um.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images006y8mN6gy1g6ur4gdgi7j30g607z0um.jpg" style="zoom:200%;" />
 
 可以看下这张图，外部访问过来后，只会映射到一个内部ip，然后到底调用的哪个POD我们是不用关心的，里面的每个POD都是独立的ip。ReplicationControler来控制副本的个数。
 
@@ -60,3 +59,4 @@ kubectl get pods, 列出所有的POD， kubectl expose kubia --type=LoadBalancer
 kubectl get replicationcontrollers,列出所有的副本。kubectl scale rc kubia --replicas=3,将副本扩充。
 
 kubectl get rc,查看扩容。kubectl get pods -o wide,查看POD的ip和运行的节点。kubectl describe pod,可以查看这个POD的日志信息。
+
