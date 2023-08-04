@@ -25,25 +25,25 @@ Nginx是一个http的反向代理web服务器，在并发能力上表现很好�
 
 正向代理是代理客户端，服务端对于不同客户端的请求是无感的。一个比较好的例子就是VPN的使用 ，比如我们翻墙使用google，实际上就是一个正向代理，用户相当于还是访问google网址，但是实际上是发给了VPN服务器，由VPN服务器来和Google进行交互通信，再把内容返还给客户端。正向代理需要配置客户端浏览器。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gknn87dbqqj31f00fual0.jpg" alt="image-20201113165046603" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gknn87dbqqj31f00fual0.jpg" style="zoom:200%;" />
 
 
 
 反向代理刚好相反，是用来代理服务端。客户端对于服务端是无感的，比如用户要访问服务端的多台tomcat服务器，可以通过访问反向代理服务器的方式，然后由反向代理服务器和 tomcat进行通信，把内容返回给客户端。所以反向代理是配置服务端。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gknnbeva0zj31gy0d2k2c.jpg" alt="image-20201113165348092" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gknnbeva0zj31gy0d2k2c.jpg" style="zoom:200%;" />
 
 #### 2.3 负载均衡
 
 负载均衡是相当于通过负载均衡服务器，来把客户端的请求根据负载均衡配置，来分配到各个服务器。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gknne980uwj31s00q2jza.jpg" alt="image-20201113165634425" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gknne980uwj31s00q2jza.jpg" style="zoom:150%;" />
 
 #### 2.4 动静分离
 
 动静分离相当于是把服务端的动态资源和静态资源分开，用nginx来指向不同的服务器。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gknnhfh59pj31ls0nun1r.jpg" alt="image-20201113165938886" style="zoom:50%;" />
+![](https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gknnhfh59pj31ls0nun1r.jpg)
 
 ### 3. 环境安装
 
@@ -241,9 +241,9 @@ upstream myserverkeepalived {
 
 Nginx的架构是一个master的主进程作为守护进程 启动，多个 work进程附属于master进程，结构如下图。每个 work而进程相当于反向代理服务器。各个work进程通过竞争来抢夺请求。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gknr4jsap0j31f40sgwmz.jpg" alt="image-20201113190537081" style="zoom:50%;" />
+![](https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gknr4jsap0j31f40sgwmz.jpg)
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gknr5m8ykmj31a20qc18i.jpg" alt="image-20201113190640325" style="zoom:50%;" />
+![](https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gknr5m8ykmj31a20qc18i.jpg)
 
 这种方式的好处：
 

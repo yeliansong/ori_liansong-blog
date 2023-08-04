@@ -50,7 +50,7 @@ host-only： 虚拟网络是在一个全封闭的网络，唯一能访问的就�
 
 弄完后，就启动了prometheus， 占用的端口是9090端口，也就开始了性能的监控。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkgeu2fkzyj31se0u0gr4.jpg" alt="image-20201107104121713" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gkgeu2fkzyj31se0u0gr4.jpg" style="zoom:67%;" />
 
 设置target就是监控的目标，默认情况下监控目标是自己，也可以设置其他的node节点进行监控。
 
@@ -64,7 +64,7 @@ host-only： 虚拟网络是在一个全封闭的网络，唯一能访问的就�
 
 这个就启动了node_exporter，进去后也是可以看到，实际上就是一堆下图这种日志。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkgf2ksptuj31lo0sawna.jpg" alt="image-20201107104939103" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gkgf2ksptuj31lo0sawna.jpg" style="zoom:150%;" />
 
 这些日志是可以被prometheus 调用和展示的。
 
@@ -79,7 +79,7 @@ service grafana-server start
 
 通过Grafana可以用dashboard把普罗米修斯添加到监控中。
 
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkgf8xgklmj31mr0u0qay.jpg" alt="image-20201107105547224" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/0081Kckwgy1gkgf8xgklmj31mr0u0qay.jpg" style="zoom:150%;" />
 
 总体来说，还是比较简单。
 

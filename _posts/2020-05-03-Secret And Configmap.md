@@ -51,23 +51,23 @@ Secret is for the information you've passed to the containers is sensitive. K8s 
   >apiVersion: v1
   >kind: Secret
   >metadata:
-  >  name: mysecret
+  >name: mysecret
   >data:
-  >  username: YWRtaW4=
-  >  password: NTY3ODk=
+  >username: YWRtaW4=
+  >password: NTY3ODk=
   >```
 
   The username and password is the sensitive information, then are encrypted. Then can use: "kubectl apply -f my secret.yaml"  to create the secret.
 
   After create the secret, then can use command to show the secret. Like this.
 
-  ![image-20200503125900696](https://tva1.sinaimg.cn/large/007S8ZIlgy1gef6b6hi5xj315c05wjsr.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/007S8ZIlgy1gef6b6hi5xj315c05wjsr.jpg" style="zoom:200%;" />
 
   Also you can use describe command to show the details.
 
-  ![image-20200503130002484](https://tva1.sinaimg.cn/large/007S8ZIlgy1gef6c7frckj317m0bygna.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/007S8ZIlgy1gef6c7frckj317m0bygna.jpg" style="zoom:200%;" />
 
-  ![image-20200503130044023](https://tva1.sinaimg.cn/large/007S8ZIlgy1gef6cxavpzj31d00hidjo.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/007S8ZIlgy1gef6cxavpzj31d00hidjo.jpg" style="zoom:200%;" />
 
   In this picture, you can see the password and username are encrypted.
 
@@ -81,30 +81,30 @@ As we known, Secret is the separated object in the k8s, so pod would use secret 
   >apiVersion: v1
   >kind: Pod
   >metadata:
-  >  name: mypod
+  >name: mypod
   >spec:
-  >  containers:
-  >  - name: mypod
-  >    image: busybox
-  >    args:
-  >      - /bin/sh
-  >      - -c
-  >      - sleep 10; touch /tmp/healthy; sleep 30000
-  >    volumeMounts:
-  >    - name: foo
-  >      mountPath: "/etc/foo"
-  >      readOnly: true
-  >  volumes:
-  >  - name: foo
-  >    secret:
-  >      secretName: mysecret
+  >containers:
+  > - name: mypod
+  >   image: busybox
+  >   args:
+  >     - /bin/sh
+  >     - -c
+  >     - sleep 10; touch /tmp/healthy; sleep 30000
+  >   volumeMounts:
+  >   - name: foo
+  >     mountPath: "/etc/foo"
+  >     readOnly: true
+  > volumes:
+  > - name: foo
+  >   secret:
+  >     secretName: mysecret
   >```
 
-  ![image-20200503135928059](https://tva1.sinaimg.cn/large/007S8ZIlgy1gef822d1fgj31du082q4e.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/007S8ZIlgy1gef822d1fgj31du082q4e.jpg" style="zoom:200%;" />
 
   From the Yaml file, we can see, mount the secret key value to the path: /etc/foo. Then we can view the secret.
 
-  <img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gef89v4uzoj30ny0mqwv9.jpg" alt="image-20200503140658555" style="zoom:50%;" />
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/007S8ZIlgy1gef89v4uzoj30ny0mqwv9.jpg" style="zoom:200%;" />
 
 ​	Also can save the data to the group path. In this way, we can save the secret encryptions.
 
@@ -114,26 +114,26 @@ As we known, Secret is the separated object in the k8s, so pod would use secret 
   >apiVersion: v1
   >kind: Pod
   >metadata:
-  >  name: mypod-env
+  >name: mypod-env
   >spec:
-  >  containers:
-  >  - name: mypod-env
-  >    image: busybox
-  >    args:
-  >      - /bin/sh
-  >      - -c
-  >      - sleep 10; touch /tmp/healthy; sleep 30000
-  >    env:
-  >      - name: SECRET_USERNAME
-  >        valueFrom:
-  >          secretKeyRef:
-  >            name: mysecret
-  >            key: username
-  >      - name: SECRET_PASSWORD
-  >        valueFrom:
-  >          secretKeyRef:
-  >            name: mysecret
-  >            key: password
+  >containers:
+  > - name: mypod-env
+  >   image: busybox
+  >   args:
+  >     - /bin/sh
+  >     - -c
+  >     - sleep 10; touch /tmp/healthy; sleep 30000
+  >   env:
+  >     - name: SECRET_USERNAME
+  >       valueFrom:
+  >         secretKeyRef:
+  >           name: mysecret
+  >           key: username
+  >     - name: SECRET_PASSWORD
+  >       valueFrom:
+  >         secretKeyRef:
+  >           name: mysecret
+  >           key: password
   >```
 
   In the pod, define the key and value. Then can get the value through the environment variable.
@@ -172,33 +172,33 @@ k8s allows separating configuration options into a separate object called a Conf
   >apiVersion: v1
   >kind: ConfigMap
   >metadata:
-  >  name: myconfigmap
+  >name: myconfigmap
   >data:
-  >  config1: xxx
-  >  config2: yyy
+  >config1: xxx
+  >config2: yyy
   >```
 
   It's the same as secret. From this, can create the separate config object, then can be used in the Pod.
 
-  ![image-20200503174710948](https://tva1.sinaimg.cn/large/007S8ZIlgy1gefemzq8dkj317a0iwdip.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/007S8ZIlgy1gefemzq8dkj317a0iwdip.jpg" style="zoom:200%;" />
 
 ### 5. How to use configmap in the Pod
 
 It's the same as secret. The configmap is like to the separate object, then Pod can use the object and get the key value. Below is one practice about configmap.
 
--  Create the configmap.
+- Create the configmap.
 
   >```shell
   >apiVersion: v1
   >kind: ConfigMap
   >metadata:
-  >  name: myconfigmap5
+  >name: myconfigmap5
   >data:
-  >  logging.conf: |
-  >    class: logging.handlers.RotatingFileHandler
-  >    formatter: precise
-  >    level: INFO
-  >    filename: %hostname-%timestamp.log
+  >logging.conf: |
+  >class: logging.handlers.RotatingFileHandler
+  >formatter: precise
+  >level: INFO
+  >filename: %hostname-%timestamp.log
   >```
 
 - Create the Pod with the configmap.
@@ -207,28 +207,28 @@ It's the same as secret. The configmap is like to the separate object, then Pod 
   >apiVersion: v1
   >kind: Pod
   >metadata:
-  >  name: mypodconfig
+  >name: mypodconfig
   >spec:
-  >  containers:
-  >  - name: mypodconfig
-  >    image: busybox
-  >    args:
-  >      - /bin/sh
-  >      - -c
-  >      - sleep 10; touch /tmp/healthy; sleep 30000
-  >    volumeMounts:
-  >    - name: foo
-  >      mountPath: "/etc/foo"
-  >  volumes:
-  >  - name: foo
-  >    configMap:
-  >      name: myconfigmap5
-  >      items:
-  >        - key: logging.conf
-  >          path: myapp/logging.conf
+  >containers:
+  > - name: mypodconfig
+  >   image: busybox
+  >   args:
+  >     - /bin/sh
+  >     - -c
+  >     - sleep 10; touch /tmp/healthy; sleep 30000
+  >   volumeMounts:
+  >   - name: foo
+  >     mountPath: "/etc/foo"
+  > volumes:
+  > - name: foo
+  >   configMap:
+  >     name: myconfigmap5
+  >     items:
+  >       - key: logging.conf
+  >         path: myapp/logging.conf
   >```
 
   In this Pod, define the mount path.  Then execute the below command.
 
-  ![image-20200503194851727](https://tva1.sinaimg.cn/large/007S8ZIlgy1gefi5lskfqj318s072dhe.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/007S8ZIlgy1gefi5lskfqj318s072dhe.jpg" style="zoom:200%;" />
 

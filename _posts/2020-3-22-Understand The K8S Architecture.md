@@ -14,7 +14,7 @@ tags:								#标签s
 
 ### 1. k8s components architecture.
 
-![5555](https://tva1.sinaimg.cn/large/00831rSTgy1gd2v5xofmoj31iv0u0n7a.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images00831rSTgy1gd2v5xofmoj31iv0u0n7a.jpg" style="zoom:200%;" />
 
 Okay,  it's very easy to understand. Like above, master node is the most important. It controls the other nodes to join the cluster. Also API server is exposed outside. Through the master node, then can arrange the other nodes.
 
@@ -28,17 +28,17 @@ Okay,  it's very easy to understand. Like above, master node is the most importa
 
 - In the master node, deploy the application with replications as 2.
 
-  ![image-20200322184610581](https://tva1.sinaimg.cn/large/00831rSTgy1gd2wbfwqq3j31fe0460u9.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images00831rSTgy1gd2wbfwqq3j31fe0460u9.jpg" style="zoom:200%;" />
 
 - After execute that, deployment is completed. You can execute command "kubectl get pods", show the deployment.
 
-  ![image-20200322184654314](https://tva1.sinaimg.cn/large/00831rSTgy1gd2wc6ysd1j321c044q4u.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images00831rSTgy1gd2wc6ysd1j321c044q4u.jpg" style="zoom:200%;" />
 
   The application is deployed separately in the 2 nodes.  
 
 ### 3. Understand the process
 
-![image-20200322182541280](https://tva1.sinaimg.cn/large/00831rSTgy1gd2vq6vm42j313s0u01co.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images00831rSTgy1gd2vq6vm42j313s0u01co.jpg" style="zoom:200%;" />
 
 This is the whole process. 
 

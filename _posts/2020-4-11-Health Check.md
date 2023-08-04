@@ -19,32 +19,32 @@ Health check is the important feature of the k8s orchestrating. K8s can monitor 
 - **liveness probes**
 
   k8s can check if a container is still alive through liveness probes. You can specify a liveness probe for each container in the pod's specification. k8s will periodically execute the probe and restart the container if the probe fails.
-  
+
   The liveness health check configure file.
-  
+
   >```yaml
   >apiVersion: v1
   >kind: Pod
   >metadata:
-  >  labels:
-  >    test: liveness
-  >  name: liveness
+  >labels:
+  >test: liveness
+  >name: liveness
   >spec:
-  >  restartPolicy: OnFailure
-  >  containers:
-  >  - name: liveness
-  >    image: busybox
-  >    args:
-  >    - /bin/sh
-  >    - -c
-  >    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 60
-  >    livenessProbe:
-  >      exec:
-  >        command:
-  >        - cat
-  >        - /tmp/healthy
-  >      initialDelaySeconds: 10
-  >      periodSeconds: 5
+  >restartPolicy: OnFailure
+  >containers:
+  > - name: liveness
+  >   image: busybox
+  >   args:
+  >   - /bin/sh
+  >   - -c
+  >   - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 60
+  >   livenessProbe:
+  >     exec:
+  >       command:
+  >       - cat
+  >       - /tmp/healthy
+  >     initialDelaySeconds: 10
+  >     periodSeconds: 5
   >```
 
 From this configure file, we define the livenessProbe. Every 5 seconds, the probe will detect and execute the command. If failed, will restart the pod again. 
@@ -55,25 +55,25 @@ From this configure file, we define the livenessProbe. Every 5 seconds, the prob
   >apiVersion: v1
   >kind: Pod
   >metadata:
-  >  labels:
-  >    test: readiness
-  >  name: readiness
+  >labels:
+  >test: readiness
+  >name: readiness
   >spec:
-  >  restartPolicy: OnFailure
-  >  containers:
-  >  - name: readiness
-  >    image: busybox
-  >    args:
-  >    - /bin/sh
-  >    - -c
-  >    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 60
-  >    readinessProbe:
-  >      exec:
-  >        command:
-  >        - cat
-  >        - /tmp/healthy
-  >      initialDelaySeconds: 10
-  >      periodSeconds: 5
+  >restartPolicy: OnFailure
+  >containers:
+  > - name: readiness
+  >   image: busybox
+  >   args:
+  >   - /bin/sh
+  >   - -c
+  >   - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 60
+  >   readinessProbe:
+  >     exec:
+  >       command:
+  >       - cat
+  >       - /tmp/healthy
+  >     initialDelaySeconds: 10
+  >     periodSeconds: 5
   >```
 
 The file is similar to liveness. Just changed the key value. For this one, when it was failure, will restart the pod one time, after that, set the readiness no use. 
@@ -88,34 +88,34 @@ How the health check used in the rolling update? Image one case, you update the 
   >apiVersion: apps/v1
   >kind: Deployment
   >metadata:
-  >  name: app
+  >name: app
   >spec:
-  >  replicas: 10
-  >  selector:
-  >    matchLabels:
-  >      run: app
-  >  template:
-  >    metadata:
-  >      labels:
-  >        run: app
-  >    spec:
-  >      containers:
-  >      - name: app
-  >        image: busybox
-  >        args:
-  >        - /bin/sh
-  >        - -c
-  >        - sleep 10; touch /tmp/healthy; sleep 30000
-  >        readinessProbe:
-  >          exec:
-  >            command:
-  >            - cat
-  >            - /tmp/healthy
-  >          initialDelaySeconds: 10
-  >          periodSeconds: 5
+  >replicas: 10
+  >selector:
+  >matchLabels:
+  > run: app
+  >template:
+  >metadata:
+  > labels:
+  >   run: app
+  >spec:
+  > containers:
+  >     - name: app
+  >       image: busybox
+  >       args:
+  >       - /bin/sh
+  >       - -c
+  >       - sleep 10; touch /tmp/healthy; sleep 30000
+  >       readinessProbe:
+  >         exec:
+  >           command:
+  >           - cat
+  >           - /tmp/healthy
+  >         initialDelaySeconds: 10
+  >         periodSeconds: 5
   >```
 
-![image-20200411175808940](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdpzbx6r8oj318i0qm7wh.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images007S8ZIlgy1gdpzbx6r8oj318i0qm7wh.jpg" style="zoom:200%;" />
 
 - Then rollling update the wrong application. It will trigger the probe to detect.
 
@@ -123,38 +123,38 @@ How the health check used in the rolling update? Image one case, you update the 
   >apiVersion: apps/v1
   >kind: Deployment
   >metadata:
-  >  name: app
+  >name: app
   >spec:
-  >  replicas: 10
-  >  selector:
-  >    matchLabels:
-  >      run: app
-  >  template:
-  >    metadata:
-  >      labels:
-  >        run: app
-  >    spec:
-  >      containers:
-  >      - name: app
-  >        image: busybox
-  >        args:
-  >        - /bin/sh
-  >        - -c
-  >        - sleep 3000
-  >        readinessProbe:
-  >          exec:
-  >            command:
-  >            - cat
-  >            - /tmp/healthy
-  >          initialDelaySeconds: 10
-  >          periodSeconds: 5
+  >replicas: 10
+  >selector:
+  >matchLabels:
+  > run: app
+  >template:
+  >metadata:
+  > labels:
+  >   run: app
+  >spec:
+  > containers:
+  >     - name: app
+  >       image: busybox
+  >       args:
+  >       - /bin/sh
+  >       - -c
+  >       - sleep 3000
+  >       readinessProbe:
+  >         exec:
+  >           command:
+  >           - cat
+  >           - /tmp/healthy
+  >         initialDelaySeconds: 10
+  >         periodSeconds: 5
   >```
 
 ​        When use this configure file to deploy, will fail. Below is the result.
 
-![ ](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdpzk08tjbj313i0qe4qp.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images007S8ZIlgy1gdpzk08tjbj313i0qe4qp.jpg" style="zoom:200%;" />
 
-![image-20200411180855382](https://tva1.sinaimg.cn/large/007S8ZIlgy1gdpztqjufbj30qa0zqx47.jpg)
+<img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images007S8ZIlgy1gdpztqjufbj30qa0zqx47.jpg" style="zoom:200%;" />
 
 From the result, we can see the new replications can't pass the health check. But the health check also remain the most old replications. This is because of the maxSurge and maxUnavailable. Will use the default value if not define in the file.maxSurge and maxUnavailable are used to define the rolling update copies and failure copies.
 
@@ -168,20 +168,22 @@ When you do the rolling update, you can record the revision. When you want to ro
 
   When add the record parameter, will record the reversion.
 
-  ![image-20200410235930980](https://tva1.sinaimg.cn/large/00831rSTgy1gdp45c5s14j31ig0oohdt.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images00831rSTgy1gdp45c5s14j31ig0oohdt.jpg" style="zoom:200%;" />
 
 - Kubectl rollout history deployment http 
 
   This will show the all deployment history version.
 
-  ![image-20200410235854295](https://tva1.sinaimg.cn/large/00831rSTgy1gdp44rkss8j31640cqtoh.jpg)
+  <img src="https://p.ipic.vip/zttryj.jpg" alt="55555" style="zoom:200%;" />
 
 - Kubectl rollout undo deployment http --to-revision=1
 
   This will rollout the version.
 
-  ![image-20200411000050144](https://tva1.sinaimg.cn/large/00831rSTgy1gdp46orwccj31mw0aa4gs.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images00831rSTgy1gdp46orwccj31mw0aa4gs.jpg" style="zoom:200%;" />
 
   Also, when you rollout successful, the version will change as your deployment.
 
-  ![image-20200411000139532](https://tva1.sinaimg.cn/large/00831rSTgy1gdp47k5pepj31760bo170.jpg)
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images00831rSTgy1gdp47k5pepj31760bo170.jpg" style="zoom:200%;" />
+
+  
