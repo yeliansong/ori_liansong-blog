@@ -21,13 +21,13 @@ tags:								#标签
 
 -  **Architecture**  
 
-  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd1jc7hhp6j30u0115q9e.jpg" alt="cpp1" style="zoom:100%;" />
+  <img src="https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/00831rSTgy1gd1jc7hhp6j30u0115q9e.jpg" style="zoom:200%;" />
 
   
 
 -  **Program Language classification.**
 
-    ![222](https://tva1.sinaimg.cn/large/00831rSTgy1gd1jcgs1bmj31as0q6afc.jpg)
+    ![](https://cdn.jsdelivr.net/gh/yeliansong/github-blog-PIC/blog-images/00831rSTgy1gd1jcgs1bmj31as0q6afc.jpg)
 
 -   **Generic Programming**
 
